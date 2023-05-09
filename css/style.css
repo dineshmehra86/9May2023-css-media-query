@@ -1,0 +1,167 @@
+@font-face {
+    font-family: 'chunkprint';
+    src: url('../fonts/chunkprint.otf'), format('opentype');
+}
+/* Element Selector */
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    width: 100%;
+    min-height: 280px;
+    line-height: 280px;
+    color: #ffffff;
+    background-image: url("../img/nature.jpg");
+    background-position: 100% 100%;
+    background-size: cover;
+}
+
+/* Direct Child Selector */
+header > h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 60px;
+    text-align: center;
+    background: rgba(23, 22, 22, 0.53);
+    font-family: 'chunkprint';
+}
+main {
+    clear: both;
+    box-sizing: border-box;
+}
+main > aside:first-child {
+    width: 25%;
+    float: left;
+    height: 600px;
+    background-color: #ecf3f4;
+}
+main > aside:first-child > ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+main > aside:first-child > ul li {
+    line-height: 24px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+main > aside:first-child > ul li a {
+    font-size: 18px;
+    line-height: 24px;
+    color: #114784;
+    text-decoration: none;
+    padding: 10px 10px;
+    transition: all 0.5s;
+}
+main > aside:first-child > ul li a:hover {
+    color: brown;
+}
+main > section {
+    width: 50%;
+    float: left;
+    text-align: center;
+}
+main > section > h2 {
+    font-size: 28px;
+    padding:0 10px;
+}
+main > section > p {
+    font-size: 16px;
+    padding:0 10px;
+}
+main > section > img {
+    width: 80%;
+    border: #3794bc dashed 2px;
+}
+main > aside:last-child {
+    width: 24%;
+    float: left;
+    color: #000000;
+    font-size: 20px;
+    background-color: #ecf3f4;
+    height: 600px;
+}
+main > aside:last-child > h3 {
+    font-size: 18px;
+    line-height: 24px;
+    padding: 10px;
+    margin: 20px 0 0 0;
+}
+main > aside:last-child > p {
+    font-size: 14px;
+    line-height: 24px;
+    padding: 0 10px;
+}
+
+footer {
+    width: 100%;
+    height: 80px;
+    line-height: 80px;
+    background-color: #0099cc;
+    color: #ffffff;
+    text-align: center;
+    clear: both;
+}
+footer > p {
+    margin: 0;
+}
+
+
+@media only screen and (min-width:676px) and (max-width:843px) {
+    header {
+        min-height: 36px;
+        line-height: 150px;
+    }
+    header h1 {
+        font-size: 28px;
+    }
+    main {
+        background-color: pink;
+    }
+    main > aside:first-child{
+        width: 25%;
+        height: 400px;
+    }
+    main > section {
+        width: 75%;
+    }
+    main > aside:last-child {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media only screen and (min-width:0px) and (max-width:675px) {
+    header {
+        min-height: 36px;
+        line-height: 150px;
+    }
+    header h1 {
+        font-size: 28px;
+    }
+    main {
+        min-height: 100%;
+    }
+    main > aside:first-child{
+        width: 100%;
+        min-height: 100%;
+        height: auto;
+    }
+    main > section {
+        width: 100%;
+        min-height: 100%;
+    }
+    main > aside:last-child {
+        width: 100%;
+        min-height: 100%;
+        height: 100%;
+    }
+    footer {
+        line-height: normal;
+        height: 100%;
+        padding: 20px 0;
+        font-size: 16px;
+    }
+}
